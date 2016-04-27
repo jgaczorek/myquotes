@@ -1,14 +1,27 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Myquotes</title>
+  <title>My Quotes</title>
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
 </head>
-<body>
-
-<%= yield %>
-
-</body>
+  <body>
+    <header class="navbar navbar-top">
+  <div class="container">
+    <div class="navbar-header">
+      <a class="navbar-brand" href="/quotes">MyQuotes</a>
+    </div>
+          <ul class="nav navbar-nav navbar-right">
+            <li><%= link_to "Home",   '#' %></li>
+            <li><%= link_to "Help",   '#' %></li>
+            <li><%= link_to "About", '#' %></li>
+            <li><a href="/quotes">Quotes</a></li> 
+    </ul>
+  </div>
+  </nav>
+    <div class="container">
+      <%= yield %>
+    </div>
+  </body>
 </html>
